@@ -13,12 +13,12 @@ cat1 = Category.create(name: 'School', icon: 'Photo', user: u1)
 cat2 = Category.create(name: 'Rent', icon: 'Photo', user: u1)
 cat3 = Category.create(name: 'shopping', icon: 'Photo', user: u1)
 
-trans1 = Transaction.create(name: 'Lunch', amount: 10, author: u1)
-trans1.categoriest << cat1
+trans1 = Purchase.create(name: 'Lunch', amount: 10, author: u1)
+trans1.categories << cat1
 
-trans2 = Transaction.create(name: 'House rent', amount: 100.50, author: u1)
+trans2 = Purchase.create(name: 'House rent', amount: 100.50, author: u1)
 trans2.categories << cat2
 
-trans3 = Transaction.create(name: 'Rice', amount: 100, author: u1)
+trans3 = Purchase.create(name: 'Rice', amount: 100, author: u1)
 trans3.categories << cat1
 trans3.categories << cat2
