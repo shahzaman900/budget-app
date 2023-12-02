@@ -57,7 +57,7 @@ This project is built using the following technologies:
 <br>
 
 - [Check the live demo, mobile version](https://budgetmap-v1.onrender.com/)
-- [Check quick demonstration of the app video by clicking the link](https://www.loom.com/share/2743ed912fbd461fa05e27b9defe57d0?sid=2c134174-f5d9-44bf-9a10-09f153f5cc11)
+- [Check quick demonstration of the app video by clicking the link](https://www.loom.com/share/794eb7aeb2354e85aa369a814ec60be9?sid=80bd047a-4777-4e8b-b3cd-3c0432b78768)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
