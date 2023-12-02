@@ -56,7 +56,7 @@ This project is built using the following technologies:
 ## 🚀 Live Demo & Video presentation<a name="live-demo"></a> <a name='video'></a>
 <br>
 
-- [Check the live demo, mobile version](https://dugetaapp.onrender.com)
+- [Check the live demo, mobile version](https://budget-app-shah.onrender.com)
 - [Check quick demonstration of the app video by clicking the link](https://www.loom.com/share/ccf39f75d66748c2b83c3fc12878fb83?sid=90f60902-56a8-410c-88fe-954c385f076aa)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
