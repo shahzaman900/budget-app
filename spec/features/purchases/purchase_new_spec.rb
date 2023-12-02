@@ -2,14 +2,14 @@ require 'rails_helper'
 
 RSpec.describe 'purchase', type: :system do
   before :all do
-    purchase.delete_all
+    Purchase.delete_all
     Category.delete_all
     User.delete_all
 
     @user = User.create(id: 1, name: 'User', surname: 'one', email: 'test@gmail.com', password: '123456')
     @category = Category.create(id: 1, user: @user, name: 'Category one', icon: 'default-image.jpg')
     @category2 = Category.create(id: 2, user: @user, name: 'Category two', icon: 'default-image.jpg')
-    @purchase = purchase.create(name: 'purchase one', amount: 10, author: @user)
+    @purchase = Purchase.create(name: 'purchase one', amount: 10, author: @user)
     @purchase.categories << @category
   end
 
