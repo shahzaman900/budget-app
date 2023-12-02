@@ -36,9 +36,11 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_02_114355) do
     t.string "name"
     t.float "amount"
     t.bigint "author_id"
+    t.bigint "categories_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_purchases_on_author_id"
+    t.index ["categories_id"], name: "index_purchases_on_categories_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -51,5 +53,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_02_114355) do
   add_foreign_key "categories", "users"
   add_foreign_key "category_purchase", "categories"
   add_foreign_key "category_purchase", "purchases"
+  add_foreign_key "purchases", "categories", column: "categories_id"
   add_foreign_key "purchases", "users", column: "author_id"
 end
