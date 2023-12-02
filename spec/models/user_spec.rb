@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before :all do
-    purchase.delete_all
+    Purchase.delete_all
     Category.delete_all
     User.delete_all
 

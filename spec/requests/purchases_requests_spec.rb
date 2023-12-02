@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'purchasess', type: :request do
   context 'GET /index' do
     before :all do
-      purchase.delete_all
+      Purchase.delete_all
       Category.delete_all
       User.delete_all
 
@@ -32,13 +32,13 @@ RSpec.describe 'purchasess', type: :request do
 
   context 'GET /show' do
     before :all do
-      purchase.delete_all
+      Purchase.delete_all
       Category.delete_all
       User.delete_all
 
       @user = User.create(id: 1, name: 'User', surname: 'one', email: 'test@gmail.com', password: '123456')
       @category = Category.create(id: 1, user: @user, name: 'Category one', icon: 'default-image.jpg')
-      @purchase = purchase.create(name: 'purchase one', amount: 10, author: @user)
+      @purchase = Purchase.create(name: 'purchase one', amount: 10, author: @user)
       @purchase.categories << @category
     end
 
@@ -63,13 +63,13 @@ RSpec.describe 'purchasess', type: :request do
 
   context 'GET /new' do
     before :all do
-      purchase.delete_all
+      Purchase.delete_all
       Category.delete_all
       User.delete_all
 
       @user = User.create(id: 1, name: 'User', surname: 'one', email: 'test@gmail.com', password: '123456')
       @category = Category.create(id: 1, user: @user, name: 'Category one', icon: 'default-image.jpg')
-      @purchase = purchase.create(name: 'purchase one', amount: 10, author: @user)
+      @purchase = Purchase.create(name: 'purchase one', amount: 10, author: @user)
       @purchase.categories << @category
     end
 

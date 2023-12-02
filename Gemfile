@@ -38,6 +38,8 @@ gem 'rspec-rails'
 
 gem 'devise'
 
+gem 'rails-controller-testing'
+
 gem 'cancancan', '~> 3.5'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]

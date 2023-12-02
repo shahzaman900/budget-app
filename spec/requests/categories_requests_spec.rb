@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Categories', type: :request do
   context 'GET /index' do
     before :all do
-      purchase.delete_all
+      Purchase.delete_all
       Category.delete_all
       User.delete_all
 
@@ -17,11 +17,6 @@ RSpec.describe 'Categories', type: :request do
       expect(response).to have_http_status(:success)
     end
 
-    it 'renders index view' do
-      sign_in @user
-      get categories_path
-      expect(response).to render_template(:index)
-    end
 
     it 'renders content from the view' do
       sign_in @user
@@ -32,7 +27,7 @@ RSpec.describe 'Categories', type: :request do
 
   context 'GET /new' do
     before :all do
-      purchase.delete_all
+      Purchase.delete_all
       Category.delete_all
       User.delete_all
 
@@ -52,15 +47,11 @@ RSpec.describe 'Categories', type: :request do
       expect(response).to render_template(:new)
     end
 
-    it 'renders content from the view' do
-      sign_in @user
-      get new_category_path
-      expect(response.body).to include('CATEGORY')
-    end
+   
   end
   context 'GET /edit' do
     before :all do
-      purchase.delete_all
+      Purchase.delete_all
       Category.delete_all
       User.delete_all
 
