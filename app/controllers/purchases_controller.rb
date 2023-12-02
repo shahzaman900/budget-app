@@ -14,12 +14,12 @@ class PurchasesController < ApplicationController
   def new
     @new_purchase_nav = true
     @category = Category.find(params[:category_id])
-    @purchase = purchase.new
+    @purchase = Purchase.new
     @current_category_id = @category.id
   end
 
   def create
-    @purchase = purchase.new(purchase_params.except(:category_ids))
+    @purchase = Purchase.new(purchase_params.except(:category_ids))
     @purchase.author = current_user
     @categories = Category.where(id: purchase_params[:category_ids])
     @categories.each do |category|
