@@ -1,4 +1,4 @@
-class CategoriesExpenditure < ApplicationRecord
+class Categoriespurchase < ApplicationRecord
   belongs_to :category
-  belongs_to :expenditure
+  belongs_to :purchase
 end
