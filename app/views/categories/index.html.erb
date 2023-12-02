@@ -2,7 +2,7 @@
   <div class="categories-outer-container">
       <% @categories.each do |category| %>
         <div class='category-container verticle-flex-display'>
-          <%= link_to category_expenditures_url(category), class: "each-category-item horizontal-flex-display" do %>
+          <%= link_to category_purchases_url(category), class: "each-category-item horizontal-flex-display" do %>
             <div class='img-info horizontal-flex-display'>
               <%= image_tag(category.icon, alt: 'Category Icon', class: 'category-img') %>
               <div class='cat-name-at verticle-flex-display'>
@@ -10,7 +10,7 @@
                 <p class='category-at'><%= category.created_at.strftime('%d %b %Y') %></p>
               </div>
             </div>
-            <p class='category-amount'>$ <%= category.expenditures_sum %></p>
+            <p class='category-amount'>$ <%= category.purchases_sum %></p>
           <% end %>
           <div class='category-buttons'>
             <%= button_to 'UPDATE', edit_category_path(category), method: :get, class: 'update-action' %>
