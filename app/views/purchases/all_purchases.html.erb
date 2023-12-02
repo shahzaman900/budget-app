@@ -1,0 +1,11 @@
+<div class="all-purchases-container">
+    <h1 id='total-budget'>Total Budget: $<%= current_user.total_budget %></h1>
+
+    <% @purchases.each do |purchase| %>
+        <div class='purchase'>
+        <p>purchase name: <%= purchase.name %></p>
+        <p>purchase created at: <%= purchase.created_at.strftime('%d %b %Y') %></p>
+        <p>purchase amount: <%= purchase.amount %></p>
+        </div>
+    <% end %>
+</div>

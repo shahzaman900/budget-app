@@ -10,44 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_01_195618) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_21_165053) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories_transactions", id: false, force: :cascade do |t|
-    t.bigint "transaction_id", null: false
-    t.bigint "category_id", null: false
-    t.index ["category_id", "transaction_id"], name: "idx_on_category_id_transaction_id_a9683369a2"
-    t.index ["transaction_id", "category_id"], name: "idx_on_transaction_id_category_id_99363cd349"
-  end
-
-  create_table "categoriestabels", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "icon"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_categoriestabels_on_user_id"
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
-  create_table "transactionstabels", force: :cascade do |t|
+  create_table "categories_purchases", id: false, force: :cascade do |t|
+    t.bigint "purchase_id", null: false
+    t.bigint "category_id", null: false
+    t.index ["purchase_id", "category_id"], name: "index_categories_purchases_on_purchase_id_and_category_id", unique: true
+  end
+
+  create_table "purchases", force: :cascade do |t|
     t.string "name"
     t.float "amount"
-    t.bigint "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_transactionstabels_on_author_id"
+    t.bigint "author_id", null: false
+    t.index ["author_id"], name: "index_purchases_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "surname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "surname"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "categories_transactions", "categoriestabels", column: "category_id", on_delete: :cascade
-  add_foreign_key "categories_transactions", "transactionstabels", column: "transaction_id", on_delete: :cascade
-  add_foreign_key "categoriestabels", "users", on_delete: :cascade
-  add_foreign_key "transactionstabels", "users", column: "author_id", on_delete: :cascade
+  add_foreign_key "categories", "users", on_delete: :cascade
+  add_foreign_key "categories_purchases", "categories", on_delete: :cascade
+  add_foreign_key "categories_purchases", "purchases", on_delete: :cascade
+  add_foreign_key "purchases", "users", column: "author_id", on_delete: :cascade
 end

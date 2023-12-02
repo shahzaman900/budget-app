@@ -1,0 +1,16 @@
+<div class="each-purchase-container verticle-flex-display">
+    <div class='purchase-info verticle-flex-display'>
+        <div class='category-names'>
+            <p>Categories included: </p>
+            <% @purchase.categories.each do |category| %>
+                <p>Category name: <%= category.name %></p>
+            <% end %>
+        </div>
+        <p class='detaile-page-tile'>purchase name: <%= @purchase.name %></p>
+        <p class='detaile-page-tile'>purchase created at: <%= @purchase.created_at.strftime('%d %b %Y') %></p>
+        <p class='detaile-page-tile'>TOTAL PAYMENT: $<%= @purchase.amount %></p>
+    </div>
+    <div class="delete-outer">
+       <%= button_to 'DELETE', category_purchase_path(@category, @purchase), method: :delete, id: 'purchase-delete-button' %>
+    </div>
+</div>
