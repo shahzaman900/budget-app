@@ -56,8 +56,8 @@ This project is built using the following technologies:
 ## 🚀 Live Demo & Video presentation<a name="live-demo"></a> <a name='video'></a>
 <br>
 
-- [Check the live demo, mobile version](https://budget-app-shah.onrender.com)
-- [Check quick demonstration of the app video by clicking the link](https://www.loom.com/share/ccf39f75d66748c2b83c3fc12878fb83?sid=90f60902-56a8-410c-88fe-954c385f076aa)
+- [Check the live demo, mobile version](https://budgetmap-v1.onrender.com/)
+- [Check quick demonstration of the app video by clicking the link](https://www.loom.com/share/2743ed912fbd461fa05e27b9defe57d0?sid=2c134174-f5d9-44bf-9a10-09f153f5cc11)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
