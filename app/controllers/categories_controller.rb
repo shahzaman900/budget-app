@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-
   def index
     @user = current_user
     @categories = @user.categories.includes(:purchases)
@@ -57,4 +56,3 @@ class CategoriesController < ApplicationController
     params.require(:category).permit(:name, :icon)
   end
 end
-
