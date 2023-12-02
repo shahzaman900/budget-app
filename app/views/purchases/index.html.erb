@@ -1,0 +1,23 @@
+<div class="purchases-index verticle-flex-display">
+  <div class='cat-name-amount'>
+    <p><%= @category.name %></p>
+    <p>$ <%= @category.purchases_sum %></p>
+  </div>
+  <div class='purchases-outer-container'>
+  <% @purchases.each do |purchase| %>
+    <div class='each-purchase horizontal-flex-display'>
+      <div class='img-info horizontal-flex-display'>
+        <%= image_tag(@category.icon, alt: 'Category Icon', class: 'category-img') %>
+        <div class='exp-name-at verticle-flex-display'>
+          <h3><%= link_to "#{purchase.name}", category_purchase_path(@category, purchase), class: 'purchase-name' %></h3>
+          <p><%= purchase.created_at.strftime('%d %b %Y') %></p>
+        </div>
+      </div>
+      <p class='purchase-amount'>$ <%= purchase.amount %></p>
+    </div>
+  <% end %>
+  </div>
+  <div class='add-purchase-outer'>
+    <%= link_to "Add new purchase", new_category_purchase_path, class: "add-purchase" %>
+  </div>
+</div>
