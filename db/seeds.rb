@@ -14,7 +14,7 @@ cat2 = Category.create(name: 'Rent', icon: 'Photo', user: u1)
 cat3 = Category.create(name: 'shopping', icon: 'Photo', user: u1)
 
 trans1 = Transaction.create(name: 'Lunch', amount: 10, author: u1)
-trans1.categories << cat1
+trans1.categoriest << cat1
 
 trans2 = Transaction.create(name: 'House rent', amount: 100.50, author: u1)
 trans2.categories << cat2
