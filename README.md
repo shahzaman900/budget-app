@@ -56,8 +56,8 @@ This project is built using the following technologies:
 ## 🚀 Live Demo & Video presentation<a name="live-demo"></a> <a name='video'></a>
 <br>
 
-- [Check the live demo, mobile version](https://dugetapp.onrender.com)
-- [Check quick demonstration of the app video by clicking the link](https://www.loom.com/share/ccf39f75d66748c2b83c3fc12878fb83?sid=90f60902-56a8-410c-88fe-954c385f076a)
+- [Check the live demo, mobile version](https://dugetaapp.onrender.com)
+- [Check quick demonstration of the app video by clicking the link](https://www.loom.com/share/ccf39f75d66748c2b83c3fc12878fb83?sid=90f60902-56a8-410c-88fe-954c385f076aa)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,12 +80,12 @@ Before running this project, make sure you have the following prerequisites inst
 1. Clone this repository to your desired folder:
 
    ```sh
-   git clone https://github.com/agneta1991/Budget-app-capstone
+   git clone https://github.com/sheezu900/budget-app.git
 
 2. Navigate to the project directory:
 
     ```sh
-    cd Budget-app-capstone
+    cd budget-app
 
 3. Run the program:
     ```sh
@@ -114,11 +114,9 @@ To run tests after setting up the linters, run the following command:
 <br>
 
 
-👤 **Agneta Pupienyte**
+👤 **Shah Zaman**
 
-- [GitHub](https://github.com/agneta1991)
-- [Twitter](https://twitter.com/pupienytea)
-- [LinkedIn](https://www.linkedin.com/in/agneta-pupienyte-124a27256/?originalSubdomain=lt)
+- [GitHub](https://github.com/sheezu900)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -139,18 +137,9 @@ In near future I am planning to implement the following:
 
 ## 🤝 Contributions, <a name="contributing"></a>issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/agneta1991/Budget-app-capstone/issues).
+Feel free to check the [issues page](https://github.com/sheezu900/Budget-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-## ⭐️ Show your support <a name="support"></a>
-<br>
-
-If you like my page please show your support and give this page a star!
-<br>
-[![Star](https://img.shields.io/github/stars/agneta1991/Budget-app-capstone?style=social)](https://github.com/agneta1991/Budget-app-capstone)
 
 
 
